@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-angelco-task-dispatcher",
+  "version": "3.0.0",
+  "description": "Task dispatcher from database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/www.js"
+  },
+  "author": "Videal LLC",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "nodejs-angelco-database": "git+https://github.com/videal/nodejs-angelco-database.git",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1"
+  }
+}
