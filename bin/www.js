@@ -1,7 +1,9 @@
 const companyTaskDispatcher = require('../');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
+app.use(cors());
 app.get('/', function (request, response) {
     const result = 'App is running';
     response.send(result);
