@@ -1,5 +1,4 @@
 const model = require('nodejs-angelco-database');
-const configurations = require('./configurations');
 const request = require('request-promise');
 module.exports = {
     start: () => {
@@ -16,14 +15,8 @@ module.exports = {
                         }
                         filterString = filterString.substring(0, filterString.length - 1);
                         var uri = configurations.uriIds + filterString;
-                        var username = configurations.proxy.username;
-                        var password = configurations.proxy.password;
-                        var port = 22225;
-                        var session_id = (1000000 * Math.random()) | 0;
-                        var super_proxy = 'http://' + username + '-session-' + session_id + ':' + password + '@zproxy.luminati.io:' + port;
                         var options = {
                             url: uri,
-                            //proxy: super_proxy,
                             headers: configurations.headers
                         };
                         request(options)
